@@ -118,7 +118,7 @@ module.exports = buildFlow.create()
          */
         _compileBEMXJST: function (sources, compilerFilename) {
             var queue = this.node.getSharedResources().jobQueue,
-                engineOptions = this._engineOptions || {},
+                engineOptions = { escapeContent: true  },
                 // join source code
                 sourceCode = sources.map(function (source) {
                     return source.contents;

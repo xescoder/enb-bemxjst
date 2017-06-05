@@ -61,6 +61,8 @@ module.exports = require('./bem-xjst').buildFlow()
             return this._mockBEMHTML();
         }
 
+        this._engineOptions = { escapeContent: true  };
+
         var filenames = this._getUniqueFilenames(fileList);
 
         return this._readFiles(filenames)
